@@ -20,12 +20,16 @@ target_include_directories(bzspline INTERFACE
     $<INSTALL_INTERFACE:include>
 )
 
-install(DIRECTORY include/ DESTINATION include)
-install(TARGETS bzspline EXPORT bzsplineTargets)
-install(EXPORT bzsplineTargets
-    FILE bzsplineTargets.cmake
-    NAMESPACE bzspline::
-    DESTINATION lib/cmake/bzspline
+install(FILES "${PROJECT_NAME}Config.cmake" 
+  DESTINATION "share/${PROJECT_NAME}/cmake"
+)
+install(TARGETS
+  RUNTIME DESTINATION bin
+  LIBRARY DESTINATION lib
+  ARCHIVE DESTINATION lib
+)
+install(DIRECTORY include/basis include/de_boor include/spline
+  DESTINATION include
 )
 
 if (BUILD_TESTING)

@@ -9,11 +9,11 @@ $ git clone https://github.com/bornaZbodulja/bzspline.git
 ```
 * Build the library:
 ```
-$ mkdir build && cd build && cmake.. && make
+$ mkdir build && cd build && cmake.. && make install
 ```
 * To also build unit tests use:
 ```
-$ mkdir build && cd build && cmake cmake -DBUILD_TESTING=ON .. && make
+$ mkdir build && cd build && cmake cmake -DBUILD_TESTING=ON .. && make install
 ```
 
 ## Improvements list
