@@ -19,7 +19,7 @@ template <int Dim>
 class Spline {
  public:
   /**
-   * @brief Construct a new Spline object
+   * @brief Default empty constructor
    */
   Spline() = default;
 
